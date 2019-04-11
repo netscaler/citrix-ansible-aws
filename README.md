@@ -3,6 +3,8 @@
 
 Ansible playbooks to quickly deploy Citrix ADC services in Amazon Web Services (AWS)
 
+> If you are looking for CloudFormation Templates to deploy Citrix ADC services in AWS, click [here](https://github.com/citrix/netscaler-aws-cloudformation)
+
 ## Pre-requisites
 
 ### Authentication
