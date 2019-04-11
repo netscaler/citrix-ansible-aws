@@ -1,5 +1,5 @@
 
-# Citrix Ansbile Playbooks for AWS deployments
+# Description
 Ansible playbooks to quickly deploy Citrix ADC services in Amazon Web Services (AWS)
 
 ## Pre-requisites
