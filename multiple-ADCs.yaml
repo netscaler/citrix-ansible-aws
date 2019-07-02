@@ -1,0 +1,45 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    state: present
+    cft_url: "https://s3.amazonaws.com/netscaler-cft-templates/cft-create-multiple-byol-vpx.template" # DO NOT change
+    region: "" # Specify AWS Region
+    debug_verbosity: 3 # use playbook with -vvv option to get the log message
+    cft_params:
+      # Citrix ADC Image
+      pCitrixADCImageID: "" # OPTIONAL. AMI ID of Citrix ADC to be provisioned. If left empty, "Citrix ADC VPX - Customer Licensed Version 12.1-50.28 (https://aws.amazon.com/marketplace/pp/B00AA01BOE)" is provisioned by default
+
+      # Virtual Private Network Configuration
+      pVpcId: vpc-aaaaaaaa # REQUIRED. VPC ID of your existing Virtual Private Cloud (VPC)
+      pSSHCidrIp: "" # REQUIRED. The IP address range that can SSH to the EC2 instance (port: 22).
+      pHTTPCidrIp: "" # REQUIRED. The IP address range that can HTTP to the EC2 instance (port: 80).
+      pHTTPSCidrIp: "" # REQUIRED. The IP address range that can HTTPS to the EC2 instance (port: 443).
+
+      # Network Interface Configuration
+      pManagementSubnet: subnet-aaaaaaaa # REQUIRED. SubnetId of an existing subnet in your Virtual Private Cloud (VPC) dedicated for Management IP. NOTE - The Management Subnet CIDR should be different from that of VPC.
+      pClientSubnet: subnet-bbbbbbbb # REQUIRED. SubnetId of an existing subnet in your Virtual Private Cloud (VPC) dedicated for Client side
+      pServerSubnet: subnet-cccccccc # REQUIRED. SubnetId of an existing subnet in your Virtual Private Cloud (VPC) dedicated for Server side.
+
+      # Instance Configuration
+      pKeyName: "" # REQUIRED. Name of an existing EC2 KeyPair to enable SSH access to the instances
+      pInstanceType: m4.xlarge # OPTIONAL. Type of Citrix ADC instance. Default is  m4.xlarge. Refer choices.md for more.
+      pTenancyType: default # OPTIONAL. Choices [default|dedicated]. Tenancy Model.
+
+      pInstanceCount: 1 # OPTIONAL. Number of Citrix ADCs to be provisoined. Default will be 1
+
+  tasks:
+    - name: Deploy requrired number of Citrix ADC instances in AWS
+      register: awscft
+      cloudformation:
+        stack_name: multiple-ADCs
+        disable_rollback: yes
+        template_url: "{{cft_url}}"
+        region: "{{region}}"
+        template_parameters: "{{cft_params}}"
+        state: "{{state}}"
+    - name: CFT details
+      debug:
+        var: awscft
+        verbosity: "{{debug_verbosity}}"
