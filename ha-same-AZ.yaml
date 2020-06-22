@@ -4,7 +4,7 @@
   gather_facts: no
   vars:
     state: present
-    cft_url: "https://s3.amazonaws.com/netscaler-cft-templates/ha_3_nic_same_zone.template" # DO NOT change
+    cft_url: "https://s3.amazonaws.com/citrixadc-automation/ha_3_nic_same_zone.template" # DO NOT change
     region: "" # Specify AWS Region
     debug_verbosity: 3 # use playbook with -vvv option to get the log message
     cft_params:
