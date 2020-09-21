@@ -32,9 +32,13 @@ Eg: `ansible-playbook <playbook-name.yaml> -e state=absent`
 To edit/customize the playbook, please refer the documentation [here](https://docs.ansible.com/ansible/latest/modules/cloudformation_module.html)
 
 ## Support
-For production issues with the templates, please contact Citrix Support through your normal support channels. If you have fixes / suggestions for improvements or requests, please raise an issue in this repository. 
+For production issues with the templates, please contact Citrix Support through your normal support channels. If you have fixes / suggestions for improvements or requests, please raise an issue/PR in this repository. 
 
 ## Further reading
-- Deploy a Citrix ADC VPX instance on AWS: https://docs.citrix.com/en-us/citrix-adc/12-1/deploying-vpx/deploy-aws.html
-- Citrix NADC Documention : https://docs.citrix.com/en-us/citrix-adc.html
-- Citrix ADC Overview : https://www.citrix.com/products/citrix-adc/
+- *Citrix ADC Documention* : https://docs.citrix.com/en-us/citrix-adc.html
+- *Citrix ADC Overview* : https://www.citrix.com/products/citrix-adc/
+- *Citrix ADC VPX on AWS*: https://docs.citrix.com/en-us/citrix-adc/13/deploying-vpx/deploy-aws.html
+- *Deploy a Citrix ADC VPX standalone instance on AWS*: https://docs.citrix.com/en-us/citrix-adc/13/deploying-vpx/deploy-aws/launch-vpx-for-aws-ami.html
+- *How High Availability on AWS works*: https://docs.citrix.com/en-us/citrix-adc/13/deploying-vpx/deploy-aws/high-availability-different-zones.html
+- *Deploy a high availability pair on AWS*: https://docs.citrix.com/en-us/citrix-adc/13/deploying-vpx/deploy-aws/vpx-aws-ha.html
+- *High Availability across AWS Availability zones*: https://docs.citrix.com/en-us/citrix-adc/13/deploying-vpx/deploy-aws/high-availability-different-zones.html

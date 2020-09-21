@@ -1,18 +1,65 @@
 # Choices in the playbook parameters
 
+###  ADCProductName:
+- Citrix ADC VPX - Customer Licensed [default]
+- Citrix ADC VPX Express - 20 Mbps
+- Citrix ADC VPX Standard Edition - 10 Mbps
+- Citrix ADC VPX Standard Edition - 200 Mbps
+- Citrix ADC VPX Standard Edition - 1000 Mbps
+- Citrix ADC VPX Standard Edition - 3Gbps
+- Citrix ADC VPX Standard Edition - 5Gbps
+- Citrix ADC VPX Premium Edition - 10 Mbps
+- Citrix ADC VPX Premium Edition - 200 Mbps
+- Citrix ADC VPX Premium Edition - 1000 Mbps
+- Citrix ADC VPX Premium Edition - 3Gbps
+- Citrix ADC VPX Premium Edition - 5Gbps
+- Citrix ADC VPX Advanced Edition - 10 Mbps
+- Citrix ADC VPX Advanced Edition - 200 Mbps
+- Citrix ADC VPX Advanced Edition - 1000 Mbps
+- Citrix ADC VPX Advanced Edition - 3Gbps
+- Citrix ADC VPX Advanced Edition - 5Gbps
+
 ### Instance types
-- m4.xlarge [default]
-- m4.2xlarge
-- m4.4xlarge
-- m4.10xlarge
+- t2.medium
+- t2.large
+- t2.xlarge
+- t2.2xlarge
 - m3.large
 - m3.xlarge
 - m3.2xlarge
+- m4.large
+- m4.xlarge
+- m4.2xlarge
+- m4.4xlarge
+- m4.10xlarge
+- m4.16xlarge
+- m5.large
+- m5.xlarge [default]
+- m5.2xlarge
+- m5.4xlarge
+- m5.8xlarge
+- m5.12xlarge
+- m5.16xlarge
+- m5.24xlarge
 - c4.large
 - c4.xlarge
 - c4.2xlarge
 - c4.4xlarge
 - c4.8xlarge
+- c5.large
+- c5.xlarge
+- c5.2xlarge
+- c5.4xlarge
+- c5.9xlarge
+- c5.12xlarge
+- c5.18xlarge
+- c5.24xlarge
+- c5n.large
+- c5n.xlarge
+- c5n.2xlarge
+- c5n.4xlarge
+- c5n.9xlarge
+- c5n.18xlarge
 
 ### License Platforms for CICO Licencing
 - VPX-10
